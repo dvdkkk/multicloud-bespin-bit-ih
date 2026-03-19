@@ -331,6 +331,21 @@ export default function App() {
                 <div className="font-bold text-slate-800">신청 전, 교육이 본인에게 적합한지 궁금하시다면 상담부터 받아보세요.</div>
               </div>
             </div>
+
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => scrollTo('contact-form')}
+              className="mt-12 bg-blue-600 text-white hover:bg-blue-700 px-10 py-5 rounded-full font-black text-xl transition-all shadow-2xl shadow-blue-600/20 flex items-center justify-center gap-3 mx-auto group"
+            >
+              지금 바로 지원하기 
+              <motion.div
+                animate={{ x: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+              >
+                <ArrowRight size={24} />
+              </motion.div>
+            </motion.button>
           </div>
         </FadeIn>
       </section>
@@ -521,6 +536,21 @@ export default function App() {
               </div>
             </div>
           </div>
+
+          <motion.button 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollTo('contact-form')}
+            className="mt-16 bg-blue-600 text-white hover:bg-blue-700 px-10 py-5 rounded-full font-black text-xl transition-all shadow-2xl shadow-blue-600/20 flex items-center justify-center gap-3 mx-auto group"
+          >
+            지금 바로 지원하기 
+            <motion.div
+              animate={{ x: [0, 5, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            >
+              <ArrowRight size={24} />
+            </motion.div>
+          </motion.button>
         </FadeIn>
       </section>
 
@@ -611,6 +641,21 @@ export default function App() {
               </div>
             ))}
           </div>
+
+          <motion.button 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollTo('contact-form')}
+            className="mt-16 bg-blue-600 text-white hover:bg-blue-700 px-10 py-5 rounded-full font-black text-xl transition-all shadow-2xl shadow-blue-600/20 flex items-center justify-center gap-3 mx-auto group"
+          >
+            지금 바로 지원하기 
+            <motion.div
+              animate={{ x: [0, 5, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            >
+              <ArrowRight size={24} />
+            </motion.div>
+          </motion.button>
         </FadeIn>
       </section>
 
@@ -813,12 +858,11 @@ export default function App() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-bold text-slate-700 mb-1 md:mb-1.5">문의내용</label>
+                  <label htmlFor="message" className="block text-sm font-bold text-slate-700 mb-1 md:mb-1.5">문의내용 (선택)</label>
                   <textarea 
                     id="message" 
                     name="message" 
                     rows={2} 
-                    required
                     className="w-full px-4 py-2 md:py-2.5 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-slate-50 focus:bg-white resize-none"
                     placeholder="궁금하신 내용을 상세히 적어주세요."
                   ></textarea>
